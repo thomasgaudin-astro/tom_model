@@ -36,31 +36,31 @@ class SimulateSingleGame:
                       Type: float
     """
     
-    #sort weights, outcomes dict: win = 1, draw = 0.5, loss = 0.0
-    weights = {1.0: home_wp, 0.5: draw_wp, 0.0: away_wp}
-    sorted_weights = {k: v for k, v in sorted(weights.items(), key=lambda item: item[1])}
+        #sort weights, outcomes dict: win = 1, draw = 0.5, loss = 0.0
+        weights = {1.0: home_wp, 0.5: draw_wp, 0.0: away_wp}
+        sorted_weights = {k: v for k, v in sorted(weights.items(), key=lambda item: item[1])}
 
-    #print(sorted_weights)
+        #print(sorted_weights)
 
-    weights_list = []
+        weights_list = []
 
-    outcomes = []
-    probabilities = []
+        outcomes = []
+        probabilities = []
 
-    for weight in sorted_weights.keys():
-        weights_list.append((weight, sorted_weights[weight]))
+        for weight in sorted_weights.keys():
+            weights_list.append((weight, sorted_weights[weight]))
 
-    for outcome in weights_list:
-        outcomes.append(outcome[0])
+        for outcome in weights_list:
+            outcomes.append(outcome[0])
 
-    for probability in weights_list:
-        probabilities.append(probability[1])
+        for probability in weights_list:
+            probabilities.append(probability[1])
 
-    #choose a random outcome 
-    outcome = random.choices(outcomes, weights=probabilities, k=1)
+        #choose a random outcome 
+        outcome = random.choices(outcomes, weights=probabilities, k=1)
 
-    #print(outcomes)
-    #print(probabilities)
-    #print(outcome)
-    
-    return outcome[0]
+        #print(outcomes)
+        #print(probabilities)
+        #print(outcome)
+        
+        return outcome[0]
