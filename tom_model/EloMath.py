@@ -7,7 +7,8 @@ class EloMath:
         Code to run all calculations needed for each match of the Tom Model
     """
 
-    def __init__(self, home_Ro, away_Ro, location, Km, outcome=None, GD=1, theta=1.7):
+    def __init__(self, home_Ro, away_Ro, location, Km, home_outcome=None, 
+                 away_outcome=None, GD=1, theta=1.7):
 
         try:
             if location == 'neutral':
@@ -25,15 +26,17 @@ class EloMath:
 
             self.home_elo_wp = calculate_home_win_probability(self.home_we, self.away_we)
             self.away_elo_wp = calculate_away_win_probability(self.home_we, self.away_we)
-            if outcome:
+
+            #only calculate these if the results of the match are known
+            if (home_outcome) & (away_outcome):
                 self.new_home_elo = calculate_elo(home_Ro, 
                                                   self.home_we, 
-                                                  outcome, Km, GD=1
+                                                  home_outcome, Km, GD=1
                                                   )
 
                 self.new_away_elo = calculate_elo(away_Ro, 
                                                   self.away_we,
-                                                  outcome, Km, GD=1
+                                                  away_outcome, Km, GD=1
                                                   )
 
         except ValueNotInListError:
