@@ -5,6 +5,27 @@ class ValueNotInListError(Exception):
 class EloMath:
     """
         Code to run all calculations needed for each match of the Tom Model
+        Inputs:
+            home_Ro (int) -> Elo rating of home team 
+            away_Ro (int) -> Elo rating of away team 
+            location (str) -> either 'home', 'away', or 'neutral'
+            Km (int) -> tournament weight constant from eloratings.net 
+            home_outcome (float) -> home team match outcome. 
+                                    1.0 for win, 0.5 for draw, 0.0 for loss
+            away_outcome (float) -> inverse value of home team outcome.
+            GD (int) -> Goal Difference of match, defaults to 1 
+            theta (float) -> fudge factor to make equations work, I have found 
+                    that 1.7 gives realistic results
+        Outputs:
+            home_we (float) -> home Win Expectancy
+            away_we (float) -> away Win Expectancy
+            home_wp (float) -> home Win Probability
+            away_wp (float) -> away Win Probability
+            draw_prob (float) -> Draw Probability
+            home_elo_wp (float) -> bad home Win Probability from eloratings.net
+            away_elo_wp (float) -> bad away Win Probability from eloratings.net
+            new_home_elo (float) -> home post-match Elo
+            new_away_elo (float) -> away post-match Elo
     """
 
     def __init__(self, home_Ro, away_Ro, location, Km, home_outcome=None, 
