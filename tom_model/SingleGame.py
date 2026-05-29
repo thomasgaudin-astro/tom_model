@@ -2,6 +2,23 @@ import random
 import EloMath as EM
 
 class SimulateSingleGame:
+        """
+        Code to randomly generate an outcome for a single game
+        Inputs:
+            home_Ro (int) -> Elo rating of home team 
+            away_Ro (int) -> Elo rating of away team 
+            location (str) -> either 'home', 'away', or 'neutral'
+            Km (int) -> tournament weight constant from eloratings.net 
+        Outputs:
+            home_wp (float) -> home Win Probability
+            away_wp (float) -> away Win Probability
+            draw_prob (float) -> Draw Probability
+            home_outcome (float) -> home team match outcome. 
+                                    1.0 for win, 0.5 for draw, 0.0 for loss
+            away_outcome (float) -> inverse value of home team outcome.
+            new_home_elo (float) -> home post-match Elo
+            new_away_elo (float) -> away post-match Elo
+    """
 
     def __init__(self, home_Ro, away_Ro, location, Km):
 
@@ -12,8 +29,10 @@ class SimulateSingleGame:
         self.draw_prob = PreMatchResults.draw_prob
 
         #Simulate match. Take the inverse of the outcome to assign to away team
-        self.home_outcome = outcome_generator(self.home_wp, self.away_wp, self.draw_prob)
-        self.away_outcome = 1 - self.home_outcome #inverse result 
+        self.home_outcome, self.away_outcome = outcome_generator(self.home_wp, 
+                                                                 self.away_wp, 
+                                                                 self.draw_prob
+                                                                 )
 
         #recalculate EloMatch to account for changes in Elo
         PostMatchResults = EM(home_Ro, away_Ro, location, Km, 
@@ -28,12 +47,11 @@ class SimulateSingleGame:
         on weighted random nnumber generator. Weights come from win probability
         calculations.
         Inputs:
-            home_wp - Win Probability for home team (float)
-            away_wp - Win Probability for away team (float)
-            draw_wp - Probaility of a draw (float)
+            home_wp (float) -> Win Probability for home team
+            away_wp (float) -> Win Probability for away team
+            draw_wp (float) -> Probaility of a draw
         Returns:
-            outcome - either 1.0 for home win, 0.5 for draw, 0.0 for home loss
-                      Type: float
+            outcome (float) -> either 1.0 for home win, 0.5 for draw, 0.0 for home loss
     """
     
         #sort weights, outcomes dict: win = 1, draw = 0.5, loss = 0.0
@@ -63,4 +81,4 @@ class SimulateSingleGame:
         #print(probabilities)
         #print(outcome)
         
-        return outcome[0]
+        return outcome[0], 1 - outcome[0]
