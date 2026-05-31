@@ -31,7 +31,7 @@ class EloMath:
             self.home_we = calculate_We(home_Ro, away_Ro, location)
             self.away_we = calculate_We(away_Ro, home_Ro, location)
             
-        else:
+        elif location == 'hosted':
             self.home_we = calculate_We(home_Ro, away_Ro, 'home')
             self.away_we = calculate_We(away_Ro, home_Ro, 'away')
 
