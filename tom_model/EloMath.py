@@ -1,7 +1,3 @@
-class ValueNotInListError(Exception):
-    """Please pick between 'home', 'away', and 'neutral'."""
-    pass
-
 class EloMath:
     """
         Code to run all calculations needed for each match of the Tom Model
@@ -31,37 +27,33 @@ class EloMath:
     def __init__(self, home_Ro, away_Ro, location, Km, home_outcome=None, 
                  away_outcome=None, GD=1, theta=1.7):
 
-        try:
-            if location == 'neutral':
-                self.home_we = calculate_We(home_Ro, away_Ro, location)
-                self.away_we = calculate_We(away_Ro, home_Ro, location)
-            elif (location == 'home') | (location == 'away'):
-                self.home_we = calculate_We(home_Ro, away_Ro, 'home')
-                self.away_we = calculate_We(away_Ro, home_Ro, 'away')
-            else:
-                raise ValueNotInList("Error. Location not in list of possibilities.")
+        if location == 'neutral':
+            self.home_we = calculate_We(home_Ro, away_Ro, location)
+            self.away_we = calculate_We(away_Ro, home_Ro, location)
+            
+        else:
+            self.home_we = calculate_We(home_Ro, away_Ro, 'home')
+            self.away_we = calculate_We(away_Ro, home_Ro, 'away')
 
-            self.home_wp = davidson_home_wp(self.home_we, self.away_we, theta=theta)
-            self.away_wp = davidson_away_wp(self.home_we, self.away_we, theta=theta)
-            self.draw_prob = davidson_tie_prob(self.home_we, self.away_we, theta=theta)
+        self.home_wp = davidson_home_wp(self.home_we, self.away_we, theta=theta)
+        self.away_wp = davidson_away_wp(self.home_we, self.away_we, theta=theta)
+        self.draw_prob = davidson_tie_prob(self.home_we, self.away_we, theta=theta)
 
-            self.home_elo_wp = calculate_home_win_probability(self.home_we, self.away_we)
-            self.away_elo_wp = calculate_away_win_probability(self.home_we, self.away_we)
+        self.home_elo_wp = calculate_home_win_probability(self.home_we, self.away_we)
+        self.away_elo_wp = calculate_away_win_probability(self.home_we, self.away_we)
 
-            #only calculate these if the results of the match are known
-            if (home_outcome) & (away_outcome):
-                self.new_home_elo = calculate_elo(home_Ro, 
-                                                  self.home_we, 
-                                                  home_outcome, Km, GD=1
-                                                  )
+        #only calculate these if the results of the match are known
+        if (home_outcome) & (away_outcome):
+            self.new_home_elo = calculate_elo(home_Ro, 
+                                                self.home_we, 
+                                                home_outcome, Km, GD=1
+                                                )
 
-                self.new_away_elo = calculate_elo(away_Ro, 
-                                                  self.away_we,
-                                                  away_outcome, Km, GD=1
-                                                  )
+            self.new_away_elo = calculate_elo(away_Ro, 
+                                                self.away_we,
+                                                away_outcome, Km, GD=1
+                                                )
 
-        except ValueNotInListError:
-            print('') #not sure what to do here, but this line needs to change
 
 
     def calculate_We(Ro, opponent_Ro, location):
