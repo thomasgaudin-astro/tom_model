@@ -28,7 +28,7 @@ class SimulateSingleGroup:
                                                                 location, Km, group
                                                                 )           
     
-    def SimulateGroup(matches, points_table,  
+    def SimulateGroup(self, matches, points_table,  
                       location, Km, group
                       ):
 

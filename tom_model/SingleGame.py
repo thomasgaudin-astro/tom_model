@@ -42,7 +42,7 @@ class SimulateSingleGame:
         self.new_away_elo = PostMatchResults.new_away_elo
 
         
-    def outcome_generator(home_wp, away_wp, draw_wp=0):
+    def outcome_generator(self, home_wp, away_wp, draw_wp=0):
     """ Code that simulates each game. Chooses outcome of win/draw/loss based
         on weighted random nnumber generator. Weights come from win probability
         calculations.

@@ -56,7 +56,7 @@ class EloMath:
 
 
 
-    def calculate_We(Ro, opponent_Ro, location):
+    def calculate_We(self, Ro, opponent_Ro, location):
         """ Calculate the We from the formula given by ELO.
             Inputs:
                 Ro (int) -> Elo rating of team 
@@ -84,7 +84,7 @@ class EloMath:
 
         return We
 
-    def davidson_home_wp(home_We, away_We, theta=1.7):
+    def davidson_home_wp(self, home_We, away_We, theta=1.7):
     """ Calculates the probability of a win for any team given the win expectancy
         calculated from the difference in Elo for each team. Formula given by 
         Davidson (1970).
@@ -101,7 +101,7 @@ class EloMath:
     
     return hwp
 
-    def davidson_away_wp(home_We, away_We, theta=1.7):
+    def davidson_away_wp(self, home_We, away_We, theta=1.7):
     """ Calculates the probability of a loss for any team given the win expectancy
         calculated from the difference in Elo for each team. Formula given by 
         Davidson (1970).
@@ -118,7 +118,7 @@ class EloMath:
     
     return awp
 
-    def davidson_tie_prob(home_We, away_We, theta=1.7):
+    def davidson_tie_prob(self, home_We, away_We, theta=1.7):
         """ Calculates the probability of a draw for any match given the win expectancy
             calculated from the difference in Elo for each team. Formula given by 
             Davidson (1970).
@@ -135,7 +135,7 @@ class EloMath:
         
         return tie
 
-    def calculate_home_win_probability(home_Ro, away_Ro):
+    def calculate_home_win_probability(self, home_Ro, away_Ro):
         """ Win probability formula from Elo ratings website. 
             Can be used, but doesn't work well.
             Inputs:
@@ -149,7 +149,7 @@ class EloMath:
 
         return wp
 
-    def calculate_away_win_probability(home_Ro, away_Ro):
+    def calculate_away_win_probability(self, home_Ro, away_Ro):
         """ Loss probability formula from Elo ratings website. 
             Can be used, but doesn't work well.
             Inputs:
@@ -163,7 +163,7 @@ class EloMath:
 
         return wp
 
-    def calculate_elo(Ro, We, WLD, Km, GD=1):
+    def calculate_elo(self, Ro, We, WLD, Km, GD=1):
         """ ELO formula used for calculation of new Elo after a match.
             Can calculate real Elo if your code simulates goals scored.
             Inputs:
