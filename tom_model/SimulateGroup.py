@@ -1,73 +1,83 @@
+import numpy as np
 import pandas as pd
 
 import SimulateSingleGame
 
 class SimulateSingleGroup:
 
-    def __init__(self, group, location, Km, elo_rank, init_elo_rank, points_table, init_points_table, 
-                       total_table, placement_table, iterations=1, count=1):
+    def __init__(self, matches, points_table, location, Km, group):
 
-        self.group_table = SimulateGroup(matches, 
-                                        points_table, 
-                                        location, Km, group,
-                                        iterations=1, count=1
-                                        )
+        self.group_table, self.placement_table = SimulateGroup(matches, 
+                                                                points_table, 
+                                                                location, Km, group
+                                                                )           
     
     def SimulateGroup(matches, points_table,  
                       location, Km, group,
                       iterations=1, count=1
                       ):
 
-        total_group_table = points_table[points_table['Group'] == group]
+        #create a placement table
+        num_teams = len(total_group_table.index)
+        placement_table = pd.DataFrame(np.zeros(num_teams, num_teams),
+                                       index=range(1, num_teams+1), 
+                                       columns=list(total_group_table.loc[:, 'Team'])
+                                       )
 
-        for num in range(iterations):
+        group_table = points_table[points_table['Group'] == group]
+        group_schedule = matches[matches['Group'] == group]
 
-            group_table = points_table[points_table['Group'] == group]
-            group_schedule = matches[matches['Group'] == group]
+        for match in group_schedule.index:
 
-            for match in group_schedule.index:
+            #initialize home team and ELO
+            home_team = group_schedule.loc[match, 'Home']
+            home_elo = group_table.loc[home_team, 'Elo Rating']
 
-                #initialize home team and ELO
-                home_team = group_schedule.loc[match, 'Home']
-                home_elo = group_table.loc[home_team, 'Elo Rating']
+            #initialize away team and ELO
+            away_team = group_schedule.loc[match, 'Away']
+            away_elo = group_table.loc[away_team, 'Elo Rating']
 
-                #initialize away team and ELO
-                away_team = group_schedule.loc[match, 'Away']
-                away_elo = group_table.loc[away_team, 'Elo Rating']
+            if group_schedule.loc[match, 'Host?'] == 'Y':
+                location = 'hosted'
+            else:
+                location = 'neutral'
 
-                if group_schedule.loc[match, 'Host?'] == 'Y':
-                    location = 'hosted'
-                else:
-                    location = 'neutral'
+            #use SimulateSingleGame class to generate all math associated with a single game
+            game = SimulateSingleGame(home_elo, away_elo, location, Km)
 
-                #use SimulateSingleGame class to generate all math associated with a single game
-                game = SimulateSingleGame(home_elo, away_elo, location, Km)
+            #update Elo ratings
+            group_table.loc[home_team, 'Elo Rating'] = game.new_home_elo
+            group_table.loc[away_team, 'Elo Rating'] = game.new_away_elo
 
-                #update Elo ratings
-                group_table.loc[home_team, 'Elo Rating'] = game.new_home_elo
-                group_table.loc[away_team, 'Elo Rating'] = game.new_away_elo
+            #home win
+            if game.home_outcome == 1:
 
-                #home win
-                if game.home_outcome == 1:
+                #update table
+                group_table.loc[home_team, 'Points'] += 3
+                group_table.loc[away_team, 'Points'] += 0    
 
-                    #update table
-                    group_table.loc[home_team, 'Points'] += 3
-                    group_table.loc[away_team, 'Points'] += 0    
+            #draw
+            elif game.home_outcome == 0.5:
 
-                #draw
-                elif game.home_outcome == 0.5:
+                #update table
+                group_table.loc[home_team, 'Points'] += 1
+                group_table.loc[away_team, 'Points'] += 1
 
-                    #update table
-                    group_table.loc[home_team, 'Points'] += 1
-                    group_table.loc[away_team, 'Points'] += 1
+            #away win
+            else:
 
-                #away win
-                else:
+                #update table
+                group_table.loc[home_team, 'Points'] += 0
+                group_table.loc[away_team, 'Points'] += 3
 
-                    #update table
-                    group_table.loc[home_team, 'Points'] += 0
-                    group_table.loc[away_team, 'Points'] += 3
+            #rank each team in group
+            group_table['Rank'] = group_table['Points'].sample(frac=1).rank(ascending=False, method='first')
 
-        total_group_table.add(group_table, fill_value=0)
+            #update placement_table
+            for team in group_table.index:
+                team_name = group_table.loc[team, 'Team']
+                team_rank = group_table.loc[team, 'Rank']
 
-        return total_group_table
+                placement_table.loc[team_rank, team_name] += 1
+
+        return group_table, placement_table
