@@ -2,12 +2,12 @@ import random
 import EloMath as EM
 
 class SimulateSingleGame:
-        """
+    """
         Code to randomly generate an outcome for a single game
         Inputs:
             home_Ro (int) -> Elo rating of home team 
             away_Ro (int) -> Elo rating of away team 
-            location (str) -> either 'home', 'away', or 'neutral'
+            location (str) -> either 'hosted', or 'neutral'
             Km (int) -> tournament weight constant from eloratings.net 
         Outputs:
             home_wp (float) -> home Win Probability

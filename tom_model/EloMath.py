@@ -4,7 +4,7 @@ class EloMath:
         Inputs:
             home_Ro (int) -> Elo rating of home team 
             away_Ro (int) -> Elo rating of away team 
-            location (str) -> either 'home', 'away', or 'neutral'
+            location (str) -> either 'hosted', or 'neutral'
             Km (int) -> tournament weight constant from eloratings.net 
             home_outcome (float) -> home team match outcome. 
                                     1.0 for win, 0.5 for draw, 0.0 for loss

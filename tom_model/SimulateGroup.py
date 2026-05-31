@@ -4,6 +4,22 @@ import pandas as pd
 import SimulateSingleGame
 
 class SimulateSingleGroup:
+    """
+        Code to randomly generate an outcome for a all games in a group
+        Inputs:
+            matches (DataFrame) -> pandas DataFrame containing all matches played in the tournament 
+                                   including the matches for the group to be simulated
+            points_table (DataFrame) -> pandas DataFrame containing all groups, points earned, 
+                                        and Elo ratings for each team 
+            location (str) -> either 'hosted', or 'neutral'
+            Km (int) -> tournament weight constant from eloratings.net 
+            group (string) -> name of the group to simulate
+        Outputs:
+            group_stage (DataFrame) -> pandas DataFrame containing points earned and
+                                       updated Elo ratings for each team in the group
+            placement_table (DataFrame) -> pandas DataFrame containing counts of how often each team ends 
+                                           up in each place of the group
+    """
 
     def __init__(self, matches, points_table, location, Km, group):
 
