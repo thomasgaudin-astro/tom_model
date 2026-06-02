@@ -28,7 +28,7 @@ class WC_2026:
             group_table = self.filter_group(self.table, group)
             self.total_placements[group] = TM.make_placement_table(group_table)
 
-        for iteration in iterations:
+        for iteration in range(iterations):
             self.total_table, self.total_placements = TM.SimulateGroupStage(self.schedule,
                                                                             self.table,
                                                                             self.total_table,
