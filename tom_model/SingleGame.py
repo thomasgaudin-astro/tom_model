@@ -29,7 +29,7 @@ class SimulateSingleGame:
         self.draw_prob = PreMatchResults.draw_prob
 
         #Simulate match. Take the inverse of the outcome to assign to away team
-        self.home_outcome, self.away_outcome = outcome_generator(self.home_wp, 
+        self.home_outcome, self.away_outcome = self.outcome_generator(self.home_wp, 
                                                                  self.away_wp, 
                                                                  self.draw_prob
                                                                  )

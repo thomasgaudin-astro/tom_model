@@ -28,28 +28,28 @@ class EloMath:
                  away_outcome=None, GD=1, theta=1.7):
 
         if location == 'neutral':
-            self.home_we = calculate_We(home_Ro, away_Ro, location)
-            self.away_we = calculate_We(away_Ro, home_Ro, location)
+            self.home_we = self.calculate_We(home_Ro, away_Ro, location)
+            self.away_we = self.calculate_We(away_Ro, home_Ro, location)
             
         elif location == 'hosted':
-            self.home_we = calculate_We(home_Ro, away_Ro, 'home')
-            self.away_we = calculate_We(away_Ro, home_Ro, 'away')
+            self.home_we = self.calculate_We(home_Ro, away_Ro, 'home')
+            self.away_we = self.calculate_We(away_Ro, home_Ro, 'away')
 
-        self.home_wp = davidson_home_wp(self.home_we, self.away_we, theta=theta)
-        self.away_wp = davidson_away_wp(self.home_we, self.away_we, theta=theta)
-        self.draw_prob = davidson_tie_prob(self.home_we, self.away_we, theta=theta)
+        self.home_wp = self.davidson_home_wp(self.home_we, self.away_we, theta=theta)
+        self.away_wp = self.davidson_away_wp(self.home_we, self.away_we, theta=theta)
+        self.draw_prob = self.davidson_tie_prob(self.home_we, self.away_we, theta=theta)
 
-        self.home_elo_wp = calculate_home_win_probability(self.home_we, self.away_we)
-        self.away_elo_wp = calculate_away_win_probability(self.home_we, self.away_we)
+        self.home_elo_wp = self.calculate_home_win_probability(self.home_we, self.away_we)
+        self.away_elo_wp = self.calculate_away_win_probability(self.home_we, self.away_we)
 
         #only calculate these if the results of the match are known
         if (home_outcome) & (away_outcome):
-            self.new_home_elo = calculate_elo(home_Ro, 
+            self.new_home_elo = self.calculate_elo(home_Ro, 
                                                 self.home_we, 
                                                 home_outcome, Km, GD=1
                                                 )
 
-            self.new_away_elo = calculate_elo(away_Ro, 
+            self.new_away_elo = self.calculate_elo(away_Ro, 
                                                 self.away_we,
                                                 away_outcome, Km, GD=1
                                                 )

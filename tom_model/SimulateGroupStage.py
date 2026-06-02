@@ -16,7 +16,7 @@ class SimulateGroupStage:
         self.placement_tables = {}
 
         #run SimulateGroup for all groups
-        SimulateAllGroups(self.groups)
+        self.SimulateAllGroups(self.groups)
 
         #add results to total tables
         for group in self.groups:
