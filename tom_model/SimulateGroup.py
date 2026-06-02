@@ -2,6 +2,7 @@ import numpy as np
 import pandas as pd
 
 import .SimulateSingleGame
+from .Utilities import make_placement_table
 
 class SimulateSingleGroup:
     """
@@ -49,15 +50,10 @@ class SimulateSingleGroup:
                                            up in each place of the group
         """
 
-        #create a placement table
-        num_teams = len(total_group_table.index)
-        placement_table = pd.DataFrame(np.zeros(num_teams, num_teams),
-                                       index=range(1, num_teams+1), 
-                                       columns=list(total_group_table.loc[:, 'Team'])
-                                       )
-
         group_table = points_table[points_table['Group'] == group]
         group_schedule = matches[matches['Group'] == group]
+
+        placement_table = make_placement_table(group_table)
 
         for match in group_schedule.index:
 
