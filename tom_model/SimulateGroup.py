@@ -1,7 +1,7 @@
 import numpy as np
 import pandas as pd
 
-from .SimulateGame import SimulateSingleGame
+from .SingleGame import SimulateSingleGame
 from .Utilities import make_placement_table
 
 class SimulateSingleGroup:
