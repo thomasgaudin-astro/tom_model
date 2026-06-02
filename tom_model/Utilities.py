@@ -1,6 +1,6 @@
 import pandas as pd
 
-def read_init_files(self, schedule_file, table_file, r32=False, r32_file=None):
+def read_init_files(schedule_file, table_file, r32=False, r32_file=None):
 
     schedule_filename = f'./Data/{schedule_file}.csv'
     table_filename = f'./Data/{table_file}.csv'
