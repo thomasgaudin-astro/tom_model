@@ -2,7 +2,7 @@ import pandas as pd
 
 from collections import Counter
 
-import .SimulateGroup
+from .SimulateGroup import SimulateSingleGroup
 
 class SimulateGroupStage:
 
