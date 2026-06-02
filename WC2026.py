@@ -25,7 +25,7 @@ class WC_2026:
         self.total_placements = {}
         for group in self.groups:
 
-            group_table = filter_group(self.table, group)
+            group_table = self.filter_group(self.table, group)
             self.total_placements[group] = TM.make_placement_table(group_table)
 
         for iteration in interations:
