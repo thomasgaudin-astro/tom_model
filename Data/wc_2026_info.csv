@@ -1,49 +1,49 @@
 ID,Team,Points,Group,Host,Elo Rating
-Mexico,Mexico,0,A,Y,
-South_Africa,South Africa,0,A,N,
-South_Korea,South Korea,0,A,N,
-Czechia,Czechia,0,A,N,
-Canada,Canada,0,B,Y,
-Bosnia_and_Herzegovina,Bosnia and Herzegovina,0,B,N,
-Qatar,Qatar,0,B,N,
-Switzerland,Switzerland,0,B,N,
-Brazil,Brazil,0,C,N,
-Morocco,Morocco,0,C,N,
-Haiti,Haiti,0,C,N,
-Scotland,Scotland,0,C,N,
-United_States,USA,0,D,Y,
-Paraguay,Paraguay,0,D,N,
-Australia,Australia,0,D,N,
-Turkiye,Türkiye,0,D,N,
-Germany,Germany,0,E,N,
-Curacao,Curaçao,0,E,N,
-Ivory_Coast,Ivory Coast,0,E,N,
-Ecuador,Ecuador,0,E,N,
-Netherlands,Netherlands,0,F,N,
-Japan,Japan,0,F,N,
-Sweden,Sweden,0,F,N,
-Tunisia,Tunisia,0,F,N,
-Belgium,Belgium,0,G,N,
-Egypt,Egypt,0,G,N,
-Iran,Iran,0,G,N,
-New_Zealand,New Zealand,0,G,N,
-Spain,Spain,0,H,N,
-Cabo_Verde,Cape Verde,0,H,N,
-Saudi_Arabia,Saudi Arabia,0,H,N,
-Uruguay,Uruguay,0,H,N,
-France,France,0,I,N,
-Senegal,Senegal,0,I,N,
-Iraq,Iraq,0,I,N,
-Norway,Norway,0,I,N,
-Argentina,Argentina,0,J,N,
-Algeria,Algeria,0,J,N,
-Austria,Austria,0,J,N,
-Jordan,Jordan,0,J,N,
-Portugal,Portugal,0,K,N,
-Congo_DR,Congo DR,0,K,N,
-Uzbekistan,Uzbekistan,0,K,N,
-Colombia,Colombia,0,K,N,
-England,England,0,L,N,
-Croatia,Croatia,0,L,N,
-Ghana,Ghana,0,L,N,
-Panama,Panama,0,L,N,
+Mexico,Mexico,0,A,Y,1868
+South_Africa,South Africa,0,A,N,1517
+South_Korea,South Korea,0,A,N,1756
+Czechia,Czechia,0,A,N,1733
+Canada,Canada,0,B,Y,1784
+Bosnia_and_Herzegovina,Bosnia and Herzegovina,0,B,N,1591
+Qatar,Qatar,0,B,N,1423
+Switzerland,Switzerland,0,B,N,1894
+Brazil,Brazil,0,C,N,1988
+Morocco,Morocco,0,C,N,1822
+Haiti,Haiti,0,C,N,1532
+Scotland,Scotland,0,C,N,1770
+United_States,USA,0,D,Y,1733
+Paraguay,Paraguay,0,D,N,1833
+Australia,Australia,0,D,N,1775
+Turkey,Turkiye,0,D,N,1905
+Germany,Germany,0,E,N,1925
+Curacao,Curacao,0,E,N,1433
+Ivory_Coast,Ivory Coast,0,E,N,1676
+Ecuador,Ecuador,0,E,N,1935
+Netherlands,Netherlands,0,F,N,1961
+Japan,Japan,0,F,N,1906
+Sweden,Sweden,0,F,N,1714
+Tunisia,Tunisia,0,F,N,1633
+Belgium,Belgium,0,G,N,1867
+Egypt,Egypt,0,G,N,1699
+Iran,Iran,0,G,N,1764
+New_Zealand,New Zealand,0,G,N,1585
+Spain,Spain,0,H,N,2165
+Cabo_Verde,Cape Verde,0,H,N,1576
+Saudi_Arabia,Saudi Arabia,0,H,N,1566
+Uruguay,Uruguay,0,H,N,1892
+France,France,0,I,N,2081
+Senegal,Senegal,0,I,N,1866
+Iraq,Iraq,0,I,N,1608
+Norway,Norway,0,I,N,1917
+Argentina,Argentina,0,J,N,2113
+Algeria,Algeria,0,J,N,1743
+Austria,Austria,0,J,N,1830
+Jordan,Jordan,0,J,N,1685
+Portugal,Portugal,0,K,N,1984
+Congo_DR,Congo DR,0,K,N,1655
+Uzbekistan,Uzbekistan,0,K,N,1727
+Colombia,Colombia,0,K,N,1975
+England,England,0,L,N,2020
+Croatia,Croatia,0,L,N,1930
+Ghana,Ghana,0,L,N,1503
+Panama,Panama,0,L,N,1733
