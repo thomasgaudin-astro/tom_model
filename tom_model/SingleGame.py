@@ -43,16 +43,16 @@ class SimulateSingleGame:
 
         
     def outcome_generator(self, home_wp, away_wp, draw_wp=0):
-    """ Code that simulates each game. Chooses outcome of win/draw/loss based
-        on weighted random nnumber generator. Weights come from win probability
-        calculations.
-        Inputs:
-            home_wp (float) -> Win Probability for home team
-            away_wp (float) -> Win Probability for away team
-            draw_wp (float) -> Probaility of a draw
-        Returns:
-            outcome (float) -> either 1.0 for home win, 0.5 for draw, 0.0 for home loss
-    """
+        """ Code that simulates each game. Chooses outcome of win/draw/loss based
+            on weighted random nnumber generator. Weights come from win probability
+            calculations.
+            Inputs:
+                home_wp (float) -> Win Probability for home team
+                away_wp (float) -> Win Probability for away team
+                draw_wp (float) -> Probaility of a draw
+            Returns:
+                outcome (float) -> either 1.0 for home win, 0.5 for draw, 0.0 for home loss
+        """
     
         #sort weights, outcomes dict: win = 1, draw = 0.5, loss = 0.0
         weights = {1.0: home_wp, 0.5: draw_wp, 0.0: away_wp}
