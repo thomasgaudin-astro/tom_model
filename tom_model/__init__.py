@@ -6,7 +6,7 @@ from .SimulateGroupStage import SimulateGroupStage
 
 #import helper functions
 from .MakeOutputs import plot_avg_placements
-from .Utilities import read_init_files
+from .Utilities import read_init_files, make_placement_table
 
 #import all
 __all__= [
@@ -15,5 +15,6 @@ __all__= [
     "SimulateSingleGroup",
     "SimulateGroupStage",
     "plot_avg_placements",
-    "read_init_files"
+    "read_init_files",
+    "make_placement_table"
 ]
