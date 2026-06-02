@@ -75,7 +75,7 @@ class EloMath:
             dr = Ro - (opponent_Ro + 100)
 
         #if at a neutral venue, calculate difference in Elo
-        elif location == 'neutral'
+        elif location == 'neutral':
             dr = Ro - opponent_Ro
 
             
