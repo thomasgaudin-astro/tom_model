@@ -6,6 +6,8 @@ import pandas as pd
 
 from copy import deepcopy
 
+from collections import Counter
+
 class WC_2026:
 
     def __init__(self, schedule, table, iterations=1):
