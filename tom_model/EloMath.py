@@ -97,9 +97,9 @@ class EloMath:
             Win Probability, type: float
         """
     
-    hwp = home_We / (home_We + (theta * away_We) )
-    
-    return hwp
+        hwp = home_We / (home_We + (theta * away_We) )
+        
+        return hwp
 
     def davidson_away_wp(self, home_We, away_We, theta=1.7):
         """ Calculates the probability of a loss for any team given the win expectancy
@@ -114,9 +114,9 @@ class EloMath:
             Loss Probability, type: float
         """
     
-    awp = away_We / ( (theta * home_We) + away_We)
-    
-    return awp
+        awp = away_We / ( (theta * home_We) + away_We)
+        
+        return awp
 
     def davidson_tie_prob(self, home_We, away_We, theta=1.7):
         """ Calculates the probability of a draw for any match given the win expectancy
