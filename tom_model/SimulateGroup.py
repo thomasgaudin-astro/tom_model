@@ -22,7 +22,7 @@ class SimulateSingleGroup:
                                            up in each place of the group
     """
 
-    def __init__(self, matches, points_table, location, Km, group):
+    def __init__(self, matches, points_table, Km, group):
 
         self.group_table, self.placement_table = SimulateGroup(matches, 
                                                                 points_table, 
@@ -30,7 +30,7 @@ class SimulateSingleGroup:
                                                                 )           
     
     def SimulateGroup(self, matches, points_table,  
-                      location, Km, group
+                      Km, group
                       ):
 
         """

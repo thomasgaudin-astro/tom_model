@@ -8,7 +8,7 @@ class SimulateGroupStage:
 
     def __init__(self, matches, points_table, 
                  total_table, total_placements, 
-                 location, Km):
+                 Km):
 
         #initiate
         self.groups = Counter(points_table.loc[:, 'Group']).keys()
