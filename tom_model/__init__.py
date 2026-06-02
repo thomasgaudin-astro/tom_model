@@ -1,7 +1,7 @@
 #import classes
 from .EloMath import EloMath
 from .SingleGame import SimulateSingleGame
-from .SingleGroup import SimulateSingleGroup
+from .SimulateGroup import SimulateSingleGroup
 from .SimulateGroupStage import SimulateGroupStage
 
 #import helper functions
