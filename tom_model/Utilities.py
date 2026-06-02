@@ -1,14 +1,19 @@
-class Utilities:
+import pandas as pd
 
-    def __init__(self, schedule_file, table_file):
+def read_init_files(self, schedule_file, table_file, r32=False, r32_file=None):
 
+    schedule_filename = f'./Data/{schedule_file}.csv'
+    table_filename = f'./Data/{table_file}.csv'
 
-    def read_init_files(self, schedule_file, table_file, r32=False):
+    match_schedule = pd.read_csv(schedule_filename, header=0, index_col=0)
+    table = pd.read_csv(table_filename, header=0, index_col=0)
 
-        schedule_filename = f'./Data/{schedule_file}.csv'
-        table_filename = f'./Data/{table_file}.csv'
+    if (r32 is True) & (r32_file):
 
-        match_schedule = pd.read_csv(schedule_filename, header=0, index_col=0)
-        table = pd.read_csv(table_filename, header=0, index_col=0)
+        r32_filename = f'./Data/{r32_file}.csv'
+        r32_rules = pd.read_csv(r32_filename)
+        
+        return match_schedule, table, r32_rules
 
-        return match_schedule, 
+    else:
+        return match_schedule, table

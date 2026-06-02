@@ -31,4 +31,4 @@ def plot_avg_placements(competition, average_placement_table, group):
         head = table[0,val-1]
         head.set_text_props(fontsize=14, fontweight='bold', verticalalignment='center')
 
-    plt.savefig(f'./TM_Outputs/{competition}/{group_placement_table}')
+    plt.savefig(f'./TM_Outputs/{competition}/{group_placement_table}.png', bbox_inches='tight')
