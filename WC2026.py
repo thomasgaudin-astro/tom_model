@@ -53,7 +53,7 @@ def main():
     schedule_file = 'wc_2026_schedule'
     table_file = 'wc_2026_info'
 
-    WC_2026(schedule_file, table_file)
+    WC_2026(schedule_file, table_file, iterations=1000)
 
 if __name__ == "__main__":
 
