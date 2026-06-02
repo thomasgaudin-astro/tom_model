@@ -16,19 +16,19 @@ class SimulateGroupStage:
         self.placement_tables = {}
 
         #run SimulateGroup for all groups
-        self.SimulateAllGroups(self.groups)
+        self.SimulateAllGroups(self.groups, matches, points_table, Km)
 
         #add results to total tables
         for group in self.groups:
             total_table.add(self.group_tables[group], fill_value=0)
             total_placements[group].add(self.placement_tables[group], fill_values=0)
     
-    def SimulateAllGroups(self, groups):
+    def SimulateAllGroups(self, groups, matches, points_table, Km):
 
         #for each group, simulate all games and append to game dictionary
         for group in groups:
 
-            group_results = SimulateSingleGroup(matches, points_table, location, Km, group)
+            group_results = SimulateSingleGroup(matches, points_table, Km, group)
 
             self.group_tables[group] = group_results.group_table
             self.placement_tables[group] = group_results.placement_table
