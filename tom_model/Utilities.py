@@ -8,7 +8,7 @@ def read_init_files(schedule_file, table_file, r32=False, r32_file=None):
     match_schedule = pd.read_csv(schedule_filename, header=0, index_col=0)
     table = pd.read_csv(table_filename, header=0, index_col=0)
 
-    if (r32 is True) & (r32_file not None):
+    if (r32 is True) & (r32_file is not None):
 
         r32_filename = f'./Data/{r32_file}.csv'
         r32_rules = pd.read_csv(r32_filename)
