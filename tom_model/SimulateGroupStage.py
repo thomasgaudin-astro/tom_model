@@ -21,7 +21,7 @@ class SimulateGroupStage:
         #add results to total tables
         for group in self.groups:
             total_table.add(self.group_tables[group], fill_value=0)
-            total_placements[group].add(self.placement_tables[group], fill_values=0)
+            total_placements.add(self.placement_tables[group], fill_values=0)
     
     def SimulateAllGroups(self, self.groups):
 
