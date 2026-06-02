@@ -23,7 +23,7 @@ def make_placement_table(total_group_table):
 
     #create a placement table
     num_teams = len(total_group_table.index)
-    placement_table = pd.DataFrame(np.zeros(num_teams, num_teams),
+    placement_table = pd.DataFrame(np.zeros((num_teams, num_teams)),
                                     index=range(1, num_teams+1), 
                                     columns=list(total_group_table.loc[:, 'Team'])
                                     )
