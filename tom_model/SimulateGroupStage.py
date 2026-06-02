@@ -28,7 +28,7 @@ class SimulateGroupStage:
         #for each group, simulate all games and append to game dictionary
         for group in groups:
 
-            group_results = SimulateGroup(matches, points_table, location, Km, group)
+            group_results = SimulateSingleGroup(matches, points_table, location, Km, group)
 
             self.group_tables[group] = group_results.group_table
             self.placement_tables[group] = group_results.placement_table
