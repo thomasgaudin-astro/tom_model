@@ -1,3 +1,4 @@
+import numpy as np
 import pandas as pd
 
 def read_init_files(schedule_file, table_file, r32=False, r32_file=None):
