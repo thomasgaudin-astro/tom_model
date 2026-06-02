@@ -1,7 +1,5 @@
 import matplotlib.pyplot as plt
 
-
-
 def plot_avg_placements(competition, average_placement_table, group):
 
     pct_fin_group = average_placement_table.sort_values(1, axis=1, ascending=False)
