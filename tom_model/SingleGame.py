@@ -1,5 +1,5 @@
 import random
-import .EloMath as EM
+from .EloMath import EloMath as EM
 
 class SimulateSingleGame:
     """
