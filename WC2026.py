@@ -16,7 +16,7 @@ class WC_2026:
         self.schedule, self.table = TM.read_init_files(schedule, table)
 
         #read number of groups
-        self.groups = Counter(points_table.loc[:, 'Group']).keys()
+        self.groups = Counter(self.table.loc[:, 'Group']).keys()
 
         #initialize total table for sum of all interations
         self.total_table = deepcopy(self.table)
