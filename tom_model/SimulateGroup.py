@@ -26,7 +26,7 @@ class SimulateSingleGroup:
 
         self.group_table, self.placement_table = self.SimulateGroup(matches, 
                                                                 points_table, 
-                                                                location, Km, group
+                                                                Km, group
                                                                 )           
     
     def SimulateGroup(self, matches, points_table,  
