@@ -85,7 +85,7 @@ class EloMath:
         return We
 
     def davidson_home_wp(self, home_We, away_We, theta=1.7):
-    """ Calculates the probability of a win for any team given the win expectancy
+        """ Calculates the probability of a win for any team given the win expectancy
         calculated from the difference in Elo for each team. Formula given by 
         Davidson (1970).
         Inputs:
@@ -95,14 +95,14 @@ class EloMath:
                     that 1.7 gives realistic results
         Returns:
             Win Probability, type: float
-    """
+        """
     
     hwp = home_We / (home_We + (theta * away_We) )
     
     return hwp
 
     def davidson_away_wp(self, home_We, away_We, theta=1.7):
-    """ Calculates the probability of a loss for any team given the win expectancy
+        """ Calculates the probability of a loss for any team given the win expectancy
         calculated from the difference in Elo for each team. Formula given by 
         Davidson (1970).
         Inputs:
@@ -112,7 +112,7 @@ class EloMath:
                     that 1.7 gives realistic results
         Returns:
             Loss Probability, type: float
-    """
+        """
     
     awp = away_We / ( (theta * home_We) + away_We)
     
