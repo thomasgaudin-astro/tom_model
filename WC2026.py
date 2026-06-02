@@ -40,9 +40,9 @@ class WC_2026:
             print(self.total_placements[group])
             print('\n')
 
-    def filter_group(self, self.table, group):
+    def filter_group(self, table, group):
 
-        group_table = self.table[self.table['Group'] == group]
+        group_table = table[table['Group'] == group]
         return group_table
 
 
