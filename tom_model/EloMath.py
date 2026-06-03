@@ -43,7 +43,7 @@ class EloMath:
         self.away_elo_wp = self.calculate_away_win_probability(self.home_we, self.away_we)
 
         #only calculate these if the results of the match are known
-        if (home_outcome) & (away_outcome):
+        if (home_outcome is not None) & (away_outcome is not None):
             self.new_home_elo = self.calculate_elo(home_Ro, 
                                                 self.home_we, 
                                                 home_outcome, Km, GD=1

@@ -1,16 +1,16 @@
 Match Num,Home,Away,Round,Group,Host?
-1,Mexico,South Africa,Group,A,Y
-2,South Korea,Czechia,Group,A,N
-3,Mexico,South Korea,Group,A,Y
-4,South Africa,Czechia,Group,A,N
+1,Mexico,South_Africa,Group,A,Y
+2,South_Korea,Czechia,Group,A,N
+3,Mexico,South_Korea,Group,A,Y
+4,South_Africa,Czechia,Group,A,N
 5,Mexico,Czechia,Group,A,Y
-6,South Africa,South Korea,Group,A,N
-7,Canada,Bosnia and Herzegovina,Group,B,Y
+6,South_Africa,South_Korea,Group,A,N
+7,Canada,Bosnia_and_Herzegovina,Group,B,Y
 8,Qatar,Switzerland,Group,B,N
 9,Canada,Qatar,Group,B,Y
-10,Bosnia and Herzegovina,Switzerland,Group,B,N
+10,Bosnia_and_Herzegovina,Switzerland,Group,B,N
 11,Canada,Switzerland,Group,B,Y
-12,Bosnia and Herzegovina,Qatar,Group,B,N
+12,Bosnia_and_Herzegovina,Qatar,Group,B,N
 13,Brazil,Morocco,Group,C,N
 14,Haiti,Scotland,Group,C,N
 15,Brazil,Haiti,Group,C,N
@@ -18,17 +18,17 @@ Match Num,Home,Away,Round,Group,Host?
 17,Brazil,Scotland,Group,C,N
 18,Morocco,Haiti,Group,C,N
 19,USA,Paraguay,Group,D,Y
-20,Australia,Türkiye,Group,D,N
+20,Australia,Turkey,Group,D,N
 21,USA,Australia,Group,D,Y
-22,Paraguay,Türkiye,Group,D,N
-23,USA,Türkiye,Group,D,Y
+22,Paraguay,Turkey,Group,D,N
+23,USA,Turkey,Group,D,Y
 24,Paraguay,Australia,Group,D,N
-25,Germany,Curaçao,Group,E,N
+25,Germany,Curacao,Group,E,N
 26,Ivory Coast,Ecuador,Group,E,N
 27,Germany,Ivory Coast,Group,E,N
-28,Curaçao,Ecuador,Group,E,N
+28,Curacao,Ecuador,Group,E,N
 29,Germany,Ecuador,Group,E,N
-30,Curaçao,Ivory Coast,Group,E,N
+30,Curacao,Ivory Coast,Group,E,N
 31,Netherlands,Japan,Group,F,N
 32,Sweden,Tunisia,Group,F,N
 33,Netherlands,Sweden,Group,F,N
@@ -36,17 +36,17 @@ Match Num,Home,Away,Round,Group,Host?
 35,Netherlands,Tunisia,Group,F,N
 36,Japan,Sweden,Group,F,N
 37,Belgium,Egypt,Group,G,N
-38,Iran,New Zealand,Group,G,N
+38,Iran,New_Zealand,Group,G,N
 39,Belgium,Iran,Group,G,N
-40,Egypt,New Zealand,Group,G,N
-41,Belgium,New Zealand,Group,G,N
+40,Egypt,New_Zealand,Group,G,N
+41,Belgium,New_Zealand,Group,G,N
 42,Egypt,Iran,Group,G,N
-43,Spain,Cape Verde,Group,H,N
-44,Saudi Arabia,Uruguay,Group,H,N
-45,Spain,Saudi Arabia,Group,H,N
-46,Cape Verde,Uruguay,Group,H,N
+43,Spain,Cabo_Verde,Group,H,N
+44,Saudi_Arabia,Uruguay,Group,H,N
+45,Spain,Saudi_Arabia,Group,H,N
+46,Cape_Verde,Uruguay,Group,H,N
 47,Spain,Uruguay,Group,H,N
-48,Cape Verde,Saudi Arabia,Group,H,N
+48,Cape_Verde,Saudi_Arabia,Group,H,N
 49,France,Senegal,Group,I,N
 50,Iraq,Norway,Group,I,N
 51,France,Iraq,Group,I,N
@@ -59,12 +59,12 @@ Match Num,Home,Away,Round,Group,Host?
 58,Algeria,Jordan,Group,J,N
 59,Argentina,Jordan,Group,J,N
 60,Algeria,Austria,Group,J,N
-61,Portugal,Congo DR,Group,K,N
+61,Portugal,Congo_DR,Group,K,N
 62,Uzbekistan,Colombia,Group,K,N
 63,Portugal,Uzbekistan,Group,K,N
-64,Congo DR,Colombia,Group,K,N
+64,Congo_DR,Colombia,Group,K,N
 65,Portugal,Colombia,Group,K,N
-66,Congo DR,Uzbekistan,Group,K,N
+66,Congo_DR,Uzbekistan,Group,K,N
 67,England,Croatia,Group,L,N
 68,Ghana,Panama,Group,L,N
 69,England,Ghana,Group,L,N
