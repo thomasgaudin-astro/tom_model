@@ -1,49 +1,49 @@
 ID,Team,Points,Group,Host,Elo Rating
-Mexico,Mexico,0,A,Y,1868
-South_Africa,South Africa,0,A,N,1517
-South_Korea,South Korea,0,A,N,1756
-Czechia,Czechia,0,A,N,1733
-Canada,Canada,0,B,Y,1784
-Bosnia_and_Herzegovina,Bosnia and Herzegovina,0,B,N,1591
-Qatar,Qatar,0,B,N,1423
-Switzerland,Switzerland,0,B,N,1894
-Brazil,Brazil,0,C,N,1988
-Morocco,Morocco,0,C,N,1822
-Haiti,Haiti,0,C,N,1532
-Scotland,Scotland,0,C,N,1770
-United_States,USA,0,D,Y,1733
-Paraguay,Paraguay,0,D,N,1833
-Australia,Australia,0,D,N,1775
-Turkey,Turkiye,0,D,N,1905
-Germany,Germany,0,E,N,1925
-Curacao,Curacao,0,E,N,1433
-Ivory_Coast,Ivory Coast,0,E,N,1676
-Ecuador,Ecuador,0,E,N,1935
-Netherlands,Netherlands,0,F,N,1961
-Japan,Japan,0,F,N,1906
-Sweden,Sweden,0,F,N,1714
-Tunisia,Tunisia,0,F,N,1633
-Belgium,Belgium,0,G,N,1867
-Egypt,Egypt,0,G,N,1699
-Iran,Iran,0,G,N,1764
-New_Zealand,New Zealand,0,G,N,1585
-Spain,Spain,0,H,N,2165
-Cabo_Verde,Cape Verde,0,H,N,1576
-Saudi_Arabia,Saudi Arabia,0,H,N,1566
-Uruguay,Uruguay,0,H,N,1892
-France,France,0,I,N,2081
-Senegal,Senegal,0,I,N,1866
-Iraq,Iraq,0,I,N,1608
-Norway,Norway,0,I,N,1917
-Argentina,Argentina,0,J,N,2113
-Algeria,Algeria,0,J,N,1743
-Austria,Austria,0,J,N,1830
-Jordan,Jordan,0,J,N,1685
-Portugal,Portugal,0,K,N,1984
-Congo_DR,Congo DR,0,K,N,1655
-Uzbekistan,Uzbekistan,0,K,N,1727
-Colombia,Colombia,0,K,N,1975
-England,England,0,L,N,2020
-Croatia,Croatia,0,L,N,1930
-Ghana,Ghana,0,L,N,1503
-Panama,Panama,0,L,N,1733
+Mexico,Mexico,0,A,Y,1868.0
+South_Africa,South Africa,0,A,N,1517.0
+South_Korea,South Korea,0,A,N,1756.0
+Czechia,Czechia,0,A,N,1733.0
+Canada,Canada,0,B,Y,1784.0
+Bosnia_and_Herzegovina,Bosnia and Herzegovina,0,B,N,1591.0
+Qatar,Qatar,0,B,N,1423.0
+Switzerland,Switzerland,0,B,N,1894.0
+Brazil,Brazil,0,C,N,1988.0
+Morocco,Morocco,0,C,N,1822.0
+Haiti,Haiti,0,C,N,1532.0
+Scotland,Scotland,0,C,N,1770.0
+United_States,USA,0,D,Y,1733.0
+Paraguay,Paraguay,0,D,N,1833.0
+Australia,Australia,0,D,N,1775.0
+Turkey,Turkiye,0,D,N,1905.0
+Germany,Germany,0,E,N,1925.0
+Curacao,Curacao,0,E,N,1433.0
+Ivory_Coast,Ivory Coast,0,E,N,1676.0
+Ecuador,Ecuador,0,E,N,1935.0
+Netherlands,Netherlands,0,F,N,1961.0
+Japan,Japan,0,F,N,1906.0
+Sweden,Sweden,0,F,N,1714.0
+Tunisia,Tunisia,0,F,N,1633.0
+Belgium,Belgium,0,G,N,1867.0
+Egypt,Egypt,0,G,N,1699.0
+Iran,Iran,0,G,N,1764.0
+New_Zealand,New Zealand,0,G,N,1585.0
+Spain,Spain,0,H,N,2165.0
+Cabo_Verde,Cape Verde,0,H,N,1576.0
+Saudi_Arabia,Saudi Arabia,0,H,N,1566.0
+Uruguay,Uruguay,0,H,N,1892.0
+France,France,0,I,N,2081.0
+Senegal,Senegal,0,I,N,1866.0
+Iraq,Iraq,0,I,N,1608.0
+Norway,Norway,0,I,N,1917.0
+Argentina,Argentina,0,J,N,2113.0
+Algeria,Algeria,0,J,N,1743.0
+Austria,Austria,0,J,N,1830.0
+Jordan,Jordan,0,J,N,1685.0
+Portugal,Portugal,0,K,N,1984.0
+Congo_DR,Congo DR,0,K,N,1655.0
+Uzbekistan,Uzbekistan,0,K,N,1727.0
+Colombia,Colombia,0,K,N,1975.0
+England,England,0,L,N,2020.0
+Croatia,Croatia,0,L,N,1930.0
+Ghana,Ghana,0,L,N,1503.0
+Panama,Panama,0,L,N,1733.0

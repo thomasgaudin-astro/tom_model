@@ -50,7 +50,7 @@ class SimulateSingleGroup:
                                            up in each place of the group
         """
 
-        group_table = points_table[points_table['Group'] == group]
+        group_table = points_table[points_table['Group'] == group].copy()
         group_schedule = matches[matches['Group'] == group]
 
         placement_table = make_placement_table(group_table)
@@ -99,13 +99,12 @@ class SimulateSingleGroup:
                 group_table.loc[away_team, 'Points'] += 3
 
             #rank each team in group
-            group_table['Rank'] = group_table['Points'].sample(frac=1).rank(ascending=False, method='first')
+            group_table.loc[:, 'Rank'] = group_table.loc[:,'Points'].sample(frac=1).rank(ascending=False, method='first')
 
             #update placement_table
             for team in group_table.index:
-                team_name = group_table.loc[team, 'Team']
                 team_rank = group_table.loc[team, 'Rank']
 
-                placement_table.loc[team_rank, team_name] += 1
+                placement_table.loc[team_rank, team] += 1
 
         return group_table, placement_table

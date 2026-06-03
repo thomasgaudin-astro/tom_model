@@ -29,17 +29,18 @@ class WC_2026:
             self.total_placements[group] = TM.make_placement_table(group_table)
 
         for iteration in range(iterations):
-            self.total_table, self.total_placements = TM.SimulateGroupStage(self.schedule,
-                                                                            self.table,
-                                                                            self.total_table,
-                                                                            self.total_placements,                                                      
-                                                                            50
-                                                                            )
+            gs = TM.SimulateGroupStage(self.schedule,
+                                        self.table,
+                                        self.total_table,
+                                        self.total_placements,                                                      
+                                        50
+                                        )
+            
 
-        print(self.total_table)
+        print(gs.total_table)
         print('\n')
         for group in self.groups:
-            print(self.total_placements[group])
+            print(gs.total_placements[group])
             print('\n')
 
     def filter_group(self, table, group):

@@ -17,18 +17,18 @@ Match Num,Home,Away,Round,Group,Host?
 16,Morocco,Scotland,Group,C,N
 17,Brazil,Scotland,Group,C,N
 18,Morocco,Haiti,Group,C,N
-19,USA,Paraguay,Group,D,Y
+19,United_States,Paraguay,Group,D,Y
 20,Australia,Turkey,Group,D,N
-21,USA,Australia,Group,D,Y
+21,United_States,Australia,Group,D,Y
 22,Paraguay,Turkey,Group,D,N
-23,USA,Turkey,Group,D,Y
+23,United_States,Turkey,Group,D,Y
 24,Paraguay,Australia,Group,D,N
 25,Germany,Curacao,Group,E,N
-26,Ivory Coast,Ecuador,Group,E,N
-27,Germany,Ivory Coast,Group,E,N
+26,Ivory_Coast,Ecuador,Group,E,N
+27,Germany,Ivory_Coast,Group,E,N
 28,Curacao,Ecuador,Group,E,N
 29,Germany,Ecuador,Group,E,N
-30,Curacao,Ivory Coast,Group,E,N
+30,Curacao,Ivory_Coast,Group,E,N
 31,Netherlands,Japan,Group,F,N
 32,Sweden,Tunisia,Group,F,N
 33,Netherlands,Sweden,Group,F,N
@@ -44,9 +44,9 @@ Match Num,Home,Away,Round,Group,Host?
 43,Spain,Cabo_Verde,Group,H,N
 44,Saudi_Arabia,Uruguay,Group,H,N
 45,Spain,Saudi_Arabia,Group,H,N
-46,Cape_Verde,Uruguay,Group,H,N
+46,Cabo_Verde,Uruguay,Group,H,N
 47,Spain,Uruguay,Group,H,N
-48,Cape_Verde,Saudi_Arabia,Group,H,N
+48,Cabo_Verde,Saudi_Arabia,Group,H,N
 49,France,Senegal,Group,I,N
 50,Iraq,Norway,Group,I,N
 51,France,Iraq,Group,I,N

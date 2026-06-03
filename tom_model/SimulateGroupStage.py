@@ -20,8 +20,16 @@ class SimulateGroupStage:
 
         #add results to total tables
         for group in self.groups:
-            total_table.add(self.group_tables[group], fill_value=0)
-            total_placements[group].add(self.placement_tables[group], fill_values=0)
+            group_table = self.group_tables[group]
+            placement_table = self.placement_tables[group]
+
+            for team in group_table.index:
+                total_table.loc[team, 'Points'] += group_table.loc[team, 'Points']
+                rank = int(group_table.loc[team, 'Rank'])
+                total_placements[group].loc[rank, team] += 1
+
+        self.total_table = total_table
+        self.total_placements = total_placements
     
     def SimulateAllGroups(self, groups, matches, points_table, Km):
 
