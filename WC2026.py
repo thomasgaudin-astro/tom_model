@@ -8,6 +8,8 @@ from copy import deepcopy
 
 from collections import Counter
 
+from tqdm import tqdm
+
 class WC_2026:
 
     def __init__(self, schedule, table, iterations=1):
@@ -28,20 +30,19 @@ class WC_2026:
             group_table = self.filter_group(self.table, group)
             self.total_placements[group] = TM.make_placement_table(group_table)
 
-        for iteration in range(iterations):
+        print(f'Simulating {iterations} World Cups.')
+        for iteration in tqdm(range(iterations)):
             gs = TM.SimulateGroupStage(self.schedule,
                                         self.table,
                                         self.total_table,
                                         self.total_placements,                                                      
                                         50
                                         )
-            
 
-        print(gs.total_table)
-        print('\n')
         for group in self.groups:
-            print(gs.total_placements[group])
-            print('\n')
+
+            average_placement_table = self.total_placements[group] / iterations    
+            TM.plot_avg_placements('WC2026', average_placement_table, group)
 
     def filter_group(self, table, group):
 

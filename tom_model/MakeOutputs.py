@@ -4,7 +4,7 @@ def plot_avg_placements(competition, average_placement_table, group):
 
     pct_fin_group = average_placement_table.sort_values(1, axis=1, ascending=False)
 
-    fig, ax = plt.subplots(figsize=(20,10), facecolor='white')
+    fig, ax = plt.subplots(figsize=(10,10), facecolor='white')
 
     ax.axis('off')
     ax.axis('tight')
@@ -16,7 +16,7 @@ def plot_avg_placements(competition, average_placement_table, group):
                         loc='center'
                         )
 
-    table.scale(1,1.7)
+    table.scale(1,2)
 
     table.auto_set_font_size(False)
     table.set_fontsize(14)
@@ -29,4 +29,4 @@ def plot_avg_placements(competition, average_placement_table, group):
         head = table[0,val-1]
         head.set_text_props(fontsize=14, fontweight='bold', verticalalignment='center')
 
-    plt.savefig(f'./TM_Outputs/{competition}/{group_placement_table}.png', bbox_inches='tight')
+    plt.savefig(f'./TM_Outputs/{competition}/Group{group}_avg_placements.png', bbox_inches='tight')
