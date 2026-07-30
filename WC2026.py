@@ -39,7 +39,7 @@ class WC_2026:
                                         50
                                         )
 
-        print(total_table)
+        print(self.total_table)
 
         for group in self.groups:
 
