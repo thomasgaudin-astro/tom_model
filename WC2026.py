@@ -46,7 +46,7 @@ class WC_2026:
 
             # print(gs.third_place)
 
-            add third place team appearances and points to total table 
+            # add third place team appearances and points to total table 
             for team in gs.third_place.index:
                 tp_points = gs.third_place.loc[team, 'Points']
 
