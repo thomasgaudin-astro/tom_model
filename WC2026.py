@@ -66,7 +66,6 @@ class WC_2026:
             average_group_table['Points'] =  average_group_table['Points'] / iterations
 
         #calculate the average third place table and print
-        gd.
 
 
 
