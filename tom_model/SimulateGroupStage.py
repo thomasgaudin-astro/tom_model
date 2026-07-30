@@ -40,7 +40,7 @@ class SimulateGroupStage:
 
                 if (third=='Y') & (rank == 3):
                     third_place_info = deepcopy(group_table.loc[team, ['Team', 'Points', 'Group']]).to_frame().T
-                    # print(third_place_info)
+                    print(third_place_info)
                     # print(self.third_place)
                     self.third_place = pd.concat([self.third_place, third_place_info], axis=1)
 
