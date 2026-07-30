@@ -1,5 +1,7 @@
 import pandas as pd
 
+from copy import deepcopy
+
 from collections import Counter
 
 from .SimulateGroup import SimulateSingleGroup
