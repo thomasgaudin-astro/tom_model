@@ -43,6 +43,8 @@ class SimulateGroupStage:
                     third_place_info = third_place_info.reset_index(drop=False)
                     self.third_place = pd.concat([self.third_place, third_place_info]).set_index('index')
 
+                    print(self.third_place)
+
         self.total_table = total_table
         self.total_placements = total_placements
     
