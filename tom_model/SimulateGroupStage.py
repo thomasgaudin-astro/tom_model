@@ -41,12 +41,13 @@ class SimulateGroupStage:
                 if (third=='Y') & (rank == 3):
                     third_place_info = deepcopy(group_table.loc[team, ['Team', 'Points', 'Group']]).to_frame().T
                     third_place_info = third_place_info.reset_index(drop=False)
-                    self.third_place = pd.concat([self.third_place, third_place_info]).set_index('index')
-
-                    print(self.third_place)
+                    self.third_place = pd.concat([self.third_place, third_place_info])
 
         self.total_table = total_table
         self.total_placements = total_placements
+
+        self.third_place = self.third_place.set_index('index')
+        print(self.third_place)
     
     def SimulateAllGroups(self, groups, group_tables, placement_tables, matches, points_table, Km):
 
