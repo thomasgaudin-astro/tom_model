@@ -39,6 +39,8 @@ class WC_2026:
                                         50
                                         )
 
+        print(total_table)
+
         for group in self.groups:
 
             #calculate the average placement table for each group then plot
@@ -46,11 +48,10 @@ class WC_2026:
             TM.plot_avg_placements('WC2026', average_placement_table, group)
 
             #calculate the average table for each group then plot
-            average_table = self.total_table[group]
+            # average_table = self.total_table[group]
 
-            print(average_table)
+            # print(average_table)
 
-            print()
 
     def filter_group(self, table, group):
 
