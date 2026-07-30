@@ -1,6 +1,9 @@
 import numpy as np
 import pandas as pd
 
+from copy import deepcopy
+
+
 def read_init_files(schedule_file, table_file, r32=False, r32_file=None):
 
     schedule_filename = f'./Data/{schedule_file}.csv'
