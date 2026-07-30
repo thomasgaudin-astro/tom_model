@@ -8,12 +8,14 @@ class SimulateGroupStage:
 
     def __init__(self, matches, points_table, 
                  total_table, total_placements, 
-                 Km):
+                 Km, third='N'):
 
         #initiate
         self.groups = Counter(points_table.loc[:, 'Group']).keys()
         self.group_tables = {}
         self.placement_tables = {}
+        if third == 'Y':
+            self.third_place = pd.DataFrame(columns=['Team', 'Points', 'Group'])
 
         #run SimulateGroup for all groups
         self.SimulateAllGroups(self.groups, matches, points_table, Km)
@@ -28,6 +30,10 @@ class SimulateGroupStage:
                 rank = int(group_table.loc[team, 'Rank'])
                 total_placements[group].loc[rank, team] += 1
 
+                if (third=='Y') & (rank == 3):
+                    third_place_info = deepcopy(group_table.loc[team, ['Team', 'Points', 'Group']])
+                    pd.concat([self.third_place, third_place_info])
+
         self.total_table = total_table
         self.total_placements = total_placements
     
@@ -40,6 +46,8 @@ class SimulateGroupStage:
 
             self.group_tables[group] = group_results.group_table
             self.placement_tables[group] = group_results.placement_table
+            
+
 
     
 
