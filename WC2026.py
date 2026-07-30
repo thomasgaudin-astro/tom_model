@@ -39,7 +39,7 @@ class WC_2026:
                                         50
                                         )
 
-        print(self.total_table)
+        # print(self.total_table)
 
         for group in self.groups:
 
@@ -48,9 +48,12 @@ class WC_2026:
             TM.plot_avg_placements('WC2026', average_placement_table, group)
 
             #calculate the average table for each group then plot
-            # average_table = self.total_table[group]
+            total_group_table = self.total_table[self.total_table['Group'] == group] 
+            average_group_table = deepcopy(total_group_table.loc[:, ['Team', 'Points']])
 
-            # print(average_table)
+            average_group_table['Points'] / iterations
+
+            print(average_group_table)
 
 
     def filter_group(self, table, group):
