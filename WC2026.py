@@ -34,6 +34,8 @@ class WC_2026:
         self.total_third_place = deepcopy(self.total_table.loc[:, ['Team', 'Points', 'Group']])
         self.total_third_place['Num Appearances'] = 0
 
+        print(self.total_third_place)
+
         print(f'Simulating {iterations} World Cups.')
         for iteration in tqdm(range(iterations)):
             gs = TM.SimulateGroupStage(self.schedule,
