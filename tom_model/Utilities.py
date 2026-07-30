@@ -46,7 +46,7 @@ def calculate_third_place_results(total_third_place, groups, iterations):
 
     #calculate average third place table
     average_tp_table = deepcopy(total_third_place)
-    average_tp_table['Points'] = average_tp_table['Points'] / iterations
+    average_tp_table['Points'] = average_tp_table['Points'] / average_tp_table['Num Appearances']
     average_tp_table['Num Appearances'] = average_tp_table['Num Appearances'] / iterations
 
     return total_third_place, average_tp_table
