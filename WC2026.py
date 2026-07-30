@@ -30,16 +30,28 @@ class WC_2026:
             group_table = self.filter_group(self.table, group)
             self.total_placements[group] = TM.make_placement_table(group_table)
 
+        #total third place initialization
+        self.total_third_place = deepcopy(self.total_table.loc[:, ['Team', 'Points', 'Group']])
+        self.total_third_place['Num Appearances'] = 0
+
         print(f'Simulating {iterations} World Cups.')
         for iteration in tqdm(range(iterations)):
             gs = TM.SimulateGroupStage(self.schedule,
                                         self.table,
                                         self.total_table,
                                         self.total_placements,                                                      
-                                        50
+                                        50,
+                                        third='Y'
                                         )
 
-        # print(self.total_table)
+            #add third place team appearances and points to total table 
+            for team in gs.third_place.index:
+                tp_points = gs.third_place.loc[team, 'Points']
+
+                self.total_third_place.loc[team, 'Num Appearances'] += 1
+                self.total_group_table.loc[team, 'Points'] += tp_points
+
+        print(self.total_third_place)
 
         for group in self.groups:
 
@@ -53,7 +65,9 @@ class WC_2026:
 
             average_group_table['Points'] =  average_group_table['Points'] / iterations
 
-            print(average_group_table)
+        #calculate the average third place table and print
+        gd.
+
 
 
     def filter_group(self, table, group):
