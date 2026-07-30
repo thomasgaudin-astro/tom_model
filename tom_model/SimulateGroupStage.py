@@ -17,7 +17,7 @@ class SimulateGroupStage:
         self.group_tables = {}
         self.placement_tables = {}
         if third == 'Y':
-            self.third_place = pd.DataFrame(columns=['Team', 'Points', 'Group'])
+            self.third_place = pd.DataFrame()
 
         #run SimulateGroup for all groups
         self.group_tables, self.placement_tables = self.SimulateAllGroups(self.groups, 
