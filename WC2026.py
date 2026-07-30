@@ -51,7 +51,7 @@ class WC_2026:
             total_group_table = self.total_table[self.total_table['Group'] == group] 
             average_group_table = deepcopy(total_group_table.loc[:, ['Team', 'Points']])
 
-            average_group_table['Points'] / iterations
+            average_group_table['Points'] =  average_group_table['Points'] / iterations
 
             print(average_group_table)
 
