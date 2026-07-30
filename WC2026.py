@@ -49,7 +49,7 @@ class WC_2026:
                 tp_points = gs.third_place.loc[team, 'Points']
 
                 self.total_third_place.loc[team, 'Num Appearances'] += 1
-                self.total_table.loc[team, 'Points'] += tp_points
+                self.total_third_place.loc[team, 'Points'] += tp_points
 
         print(self.total_third_place)
 
