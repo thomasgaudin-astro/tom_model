@@ -45,7 +45,7 @@ class SimulateGroupStage:
 
         self.total_table = total_table
         self.total_placements = total_placements
-        if third == 'Y'
+        if third == 'Y':
             self.third_place = self.third_place.set_index('index')
     
     def SimulateAllGroups(self, groups, group_tables, placement_tables, matches, points_table, Km):
