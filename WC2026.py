@@ -70,7 +70,7 @@ class WC_2026:
             max_appearances = np.max(group_third_place['Num Appearances'])
 
             for team in group_third_place.index:
-                if group_third_place.loc[team, 'Num Appearancs'] < max_appearances:
+                if group_third_place.loc[team, 'Num Appearances'] < max_appearances:
                     self.total_third_place = self.total_third_place.drop(index=team)
 
         print(self.total_third_place)
