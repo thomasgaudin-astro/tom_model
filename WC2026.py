@@ -64,7 +64,7 @@ class WC_2026:
 
             average_group_table['Points'] =  average_group_table['Points'] / iterations
 
-        #calculate the average third place table and print
+        #Remove all but the most common third place teams from each group
         for group in self.groups:
             group_third_place = self.total_third_place[self.total_third_place['Group'] == group]
             max_appearances = np.max(group_third_place['Num Appearances'])
@@ -73,7 +73,12 @@ class WC_2026:
                 if group_third_place.loc[team, 'Num Appearances'] < max_appearances:
                     self.total_third_place = self.total_third_place.drop(index=team)
 
-        print(self.total_third_place)
+        #calculate average third place table
+        self.average_tp_table = deepcopy(self.total_third_place)
+        self.average_tp_table['Points'] = self.average_tp_table['Points'] / iterations
+        self.average_tp_table['Num Appearances'] = self.average_tp_table['Num Appearances'] / iterations
+
+        print(self.average_tp_table)
                 
 
 
