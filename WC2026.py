@@ -51,8 +51,6 @@ class WC_2026:
                 self.total_third_place.loc[team, 'Num Appearances'] += 1
                 self.total_third_place.loc[team, 'Points'] += tp_points
 
-        print(self.total_third_place)
-
         for group in self.groups:
 
             #calculate the average placement table for each group then plot
@@ -66,6 +64,16 @@ class WC_2026:
             average_group_table['Points'] =  average_group_table['Points'] / iterations
 
         #calculate the average third place table and print
+        for group in groups:
+            group_third_place = self.total_third_place[self.total_third_place['Group'] == group]
+            max_appearances = np.max(group_third_place['Num Appearances'])
+
+            for team in group_third_place.index:
+                if group_third_place.loc[team, 'Num Appearancs'] < max_appearances:
+                    self.total_third_place = self.total_third_place.drop(index=team)
+
+        print(self.total_third_place)
+                
 
 
 
