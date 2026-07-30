@@ -63,7 +63,7 @@ class WC_2026:
             average_group_table['Points'] =  average_group_table['Points'] / iterations
 
         #calculate the average third place table and print
-        for group in groups:
+        for group in self.groups:
             group_third_place = self.total_third_place[self.total_third_place['Group'] == group]
             max_appearances = np.max(group_third_place['Num Appearances'])
 
