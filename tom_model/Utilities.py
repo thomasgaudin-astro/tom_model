@@ -33,7 +33,7 @@ def make_placement_table(total_group_table):
 
     return placement_table
 
-def calculate_third_place_results(total_third_place, groups):
+def calculate_third_place_results(total_third_place, groups, iterations):
 
     #Remove all but the most common third place teams from each group
     for group in groups:

@@ -65,7 +65,8 @@ class WC_2026:
             average_group_table['Points'] =  average_group_table['Points'] / iterations
 
         self.total_third_place, self.average_tp_table = TM.calculate_third_place_results(self.total_third_place,
-                                                                                         self.groups
+                                                                                         self.groups,
+                                                                                         iterations
                                                                                          )
 
         print(self.average_tp_table)
