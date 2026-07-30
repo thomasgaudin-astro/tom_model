@@ -29,3 +29,21 @@ def make_placement_table(total_group_table):
                                     )
 
     return placement_table
+
+def calculate_third_place_results(total_third_place, groups):
+
+    #Remove all but the most common third place teams from each group
+    for group in groups:
+        group_third_place = self.total_third_place[self.total_third_place['Group'] == group]
+        max_appearances = np.max(group_third_place['Num Appearances'])
+
+        for team in group_third_place.index:
+            if group_third_place.loc[team, 'Num Appearances'] < max_appearances:
+                self.total_third_place = self.total_third_place.drop(index=team)
+
+    #calculate average third place table
+    self.average_tp_table = deepcopy(self.total_third_place)
+    self.average_tp_table['Points'] = self.average_tp_table['Points'] / iterations
+    self.average_tp_table['Num Appearances'] = self.average_tp_table['Num Appearances'] / iterations
+
+    return total_third_place, average_tp_table
